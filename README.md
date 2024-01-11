@@ -129,11 +129,17 @@ This contains information about individuals (employees) and their associated reg
 
 
 
+## Case study business questions and answers
+
+What are the three countries that generated the highest total profit for Global Superstore in 2014?
+
+
+
 
 ## Tools Used
 
 - [MySQL Workbench](https://dev.mysql.com/downloads/workbench/) (version 8.0)
-- [Power BI Desktop]([https://dev.mysql.com/downloads/workbench/](https://www.microsoft.com/en-us/download/details.aspx?id=58494))
+- [Power BI Desktop](https://www.microsoft.com/en-us/download/details.aspx?id=58494)
 
 
 ## Skillset Applied
