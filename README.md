@@ -1,10 +1,10 @@
 # Global Superstore Project
 
-![Global Store](https://images.pexels.com/photos/5632346/pexels-photo-5632346.jpeg)
+![Global Store](https://images.pexels.com/photos/1797428/pexels-photo-1797428.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
 
 
 ## Brief
-Global Superstore is a global online retailer based in New York, boasting a broad product catalogue and aiming to be a one-stop-shop for its customers globally. The superstore’s clientele, hailing from 147 different countries can browse through an endless offering with more than 10,000 products. This large selection comprises three main categories: `office` `supplies` (e.g., staples), `furniture` (e.g., chairs), and `technology` (e.g., smartphones). I have been contracted as a Data Analyst to help Global Superstore analyze and draw out meaningful insight from the Superstore dataset which would aid management in making informed decisions to improve performance and profitability.
+Global Superstore is a global online retailer based in New York, boasting a broad product catalogue and aiming to be a one-stop-shop for its customers globally. The superstore’s clientele, hailing from 147 different countries can browse through an endless offering with more than 10,000 products. This large selection comprises three main categories: `office` `supplies` (e.g. staples), `furniture` (e.g. chairs), and `technology` (e.g. smartphones). I have been contracted as a Data Analyst to help Global Superstore analyze and draw out meaningful insight from the Superstore dataset which would aid management in making informed decisions to improve performance and profitability.
 
 ## Table of Contents
 
@@ -48,6 +48,7 @@ Global Superstore is a global online retailer based in New York, boasting a broa
  
 
 
+
 ## Dataset and spreadsheet explanation
 
 The dataset for this project is presented in an unstandardized Excel spreadsheet format. It contains 3 different but related spreadsheets. These spreadsheets are:
@@ -77,8 +78,54 @@ This spreadsheet contains data of orders made by customers. The columns in this 
 
 - `Country`: This field contains data about the country associated with each order.
 
-- `Postal Code`: This refers to a series of letters, numbers, or both, that are used in a mailing address to facilitate the sorting and delivery of mail. In the context of an order                       spreadsheet, the Postal Code information allows businesses to perform detailed analyses related to geographic locations, such as assessing shipping costs, optimizing                     delivery routes, and understanding customer distribution. Additionally, it can be beneficial for compliance with shipping and mailing requirements.
+- `Postal Code`: This refers to a series of letters, numbers, or both, that are used in a mailing address to facilitate the sorting and delivery of mail. In the context of an order                       spreadsheet, the Postal Code information allows businesses to perform detailed analyses related to geographic locations, such as assessing shipping costs, optimizing                     delivery routes, and understanding customer distribution. Additionally, it can be beneficial for compliance with shipping and mailing requirements. NB: Not all postal                    code data was available at the time of analysis.
+  
+- `Market`: This represents the geographic region associated with each order, such as the United States (US), Asia-Pacific (APAC), or Europe, Middle East, and Africa (EMEA).
 
+- `Region`: This field represents a specific region or area associated with each order. Similar to the "Market" column, the "Region" column helps categorize orders based on broader                  geographic areas within which a business operates or wants to analyze performance.
+
+- `Product ID`: This field serves as a unique identifier for each product. The Product ID is used to uniquely identify and distinguish different products within the dataset. Each                        product in this inventory or catalog would have its own unique Product ID.
+
+- `Category`: This field categorizes each product into a broader group or classification. The "Category" column helps organize and analyze products based on common characteristics,                    features, or functions.
+
+- `Sub-Category`: This field provides a more detailed classification of each product within a broader category. While the "Category" column groups products into high-level categories,                     the "Sub-Category" column adds another layer of granularity by further specifying the type or variant of each product.
+
+- `Product Name`: This field refers to the specific names or labels of the products being sold.
+
+- `Sales`: This field contains data of the total revenue generated from each order. The "Sales" column is calculated by multiplying the "Quantity" of each product by its corresponding              "Price."
+
+- `Quantity`: This field represents the number of units or items of a particular product ordered in each transaction. The "Quantity" column indicates the quantity of each product                      associated with a specific order.
+
+- `Discount`: This column captures the amount of price reduction applied to each product or order. The "Discount" column is used to record any discounts or promotional reductions in the               total price for specific products or the entire order.
+
+- `Profit`: This column represents the financial gain or loss associated with each order or product.
+
+- `Shipping Cost`: This column captures the cost associated with shipping each order. The "Shipping Cost" column includes the expenses incurred for delivering the products to the                           customers. This cost may cover transportation, packaging, handling, and any other logistics-related expenses.
+
+- `Order Priority`: This field represents the priority level assigned to each order. The "Order Priority" column helps categorize orders based on their importance, urgency, or specific                      criteria determined by the business.
+
+
+
+#### Returns Sheet
+
+This spreadsheet tracks and manages product returns. The columns in this sheet consist of the following:
+
+- `Returned`: This refers to items that customers have sent back to the seller or business as part of a product return process. When a customer is dissatisfied with a product, receives                a defective item, or simply changes their mind, they may initiate a return to the seller. The returned items are then tracked and managed in the return spreadsheet.
+
+- `Order-ID`: This refers to a unique identifier assigned to a specific order when it was originally placed by a customer. The Order-ID is used to associate all relevant information and               details about that particular order, including the items purchased, customer details, and other transaction-related information.
+
+- `Market`: This represents the geographic region associated with each order when it was originally placed by a customer, such as the United States (US), Asia-Pacific (APAC), or Europe,             Middle East, and Africa (EMEA).
+
+
+
+
+#### People Sheet
+
+This contains information about individuals (employees) and their associated regions. The columns in this sheet consist of the following:
+
+- `People`: This column contains information about individual employees.
+  
+- `Region`: This refers to broader geographical location or area where the employee is located. This information is useful for organizational planning, management, and understanding the             distribution of employees across different locations.
 
 
 
@@ -86,6 +133,7 @@ This spreadsheet contains data of orders made by customers. The columns in this 
 ## Tools Used
 
 - [MySQL Workbench](https://dev.mysql.com/downloads/workbench/) (version 8.0)
+- [Power BI Desktop]([https://dev.mysql.com/downloads/workbench/](https://www.microsoft.com/en-us/download/details.aspx?id=58494))
 
 
 ## Skillset Applied
