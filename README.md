@@ -1,5 +1,8 @@
 # Global Superstore Project
 
+![Global Store](https://images.pexels.com/photos/5632346/pexels-photo-5632346.jpeg)
+
+
 ## Brief
 Global Superstore is a global online retailer based in New York, boasting a broad product catalogue and aiming to be a one-stop-shop for its customers globally. The superstore’s clientele, hailing from 147 different countries can browse through an endless offering with more than 10,000 products. This large selection comprises three main categories: `office` `supplies` (e.g., staples), `furniture` (e.g., chairs), and `technology` (e.g., smartphones). I have been contracted as a Data Analyst to help Global Superstore analyze and draw out meaningful insight from the Superstore dataset which would aid management in making informed decisions to improve performance and profitability.
 
@@ -65,6 +68,16 @@ This spreadsheet contains data of orders made by customers. The columns in this 
 - `Customer ID`: This represents a unique identifier assigned to each customer. This identifier is used to distinguish one customer from another.
 
 - `Customer Name`: This refers to the name of the individual or entity that has placed an order.
+
+- `Segment`: This refers to the category/division used to classify and organize orders based on certain criteria.
+
+- `City`: This field contains data about the city associated with each order.
+
+- `State`: This field contains data about the state associated with each order.
+
+- `Country`: This field contains data about the country associated with each order.
+
+- `Postal Code`: This refers to a series of letters, numbers, or both, that are used in a mailing address to facilitate the sorting and delivery of mail. In the context of an order                       spreadsheet, the Postal Code information allows businesses to perform detailed analyses related to geographic locations, such as assessing shipping costs, optimizing                     delivery routes, and understanding customer distribution. Additionally, it can be beneficial for compliance with shipping and mailing requirements.
 
 
 
