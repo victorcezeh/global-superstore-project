@@ -133,6 +133,43 @@ This contains information about individuals (employees) and their associated reg
 In the course of trying to clean the data using Excel, I realised it was already a clean data when collected from the source. I checked for data duplicates and spelling errors and found nothing. I went ahead to standardize the Excel spreadsheet, seperate the `Orders`, `Returns` and `People` sheets and covert them into CSV formats for easy data ingestion into MySQL Workbench using Table Data Import Wizard on MySQL Workbench.
 
 
+## Orders Table on Excel
+
+![Orders Table on Excel](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/83c9a798-208b-4be9-8a4d-16a453280468)
+
+
+## Returns Table on Excel
+
+![Returns Table on Excel](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/9192d9d1-ae1f-4414-89d1-b628c8d523cc)
+
+
+## People Table on Excel
+
+![People Table on Excel](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/cc4a7380-ddcf-4699-8f26-bccb0b48b2cc)
+
+
+## Orders Table on MySQL Workbench after converting Excel format to CSV and importing into MySQL
+
+![Orders Table on MySQL Workbench](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/3b2d7291-290e-4615-8361-dbf7d2fb5528)
+
+
+## Returns Table on MySQL Workbench after converting Excel format to CSV and importing into MySQL
+
+![Returns Table on MySQL Workbench](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/2b072ce3-3aba-467a-bc89-db1b19a29c4f)
+
+
+## People Table on MySQL Workbench after converting Excel format to CSV and importing into MySQL
+
+![People Table on MySQL Workbench](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/ac05d757-97c0-4feb-b618-af75525c8881)
+
+
+
+
+
+
+
+
+
 
 ## Case study business questions and answers
 
