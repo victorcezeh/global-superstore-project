@@ -21,7 +21,7 @@ Global Superstore is a global online retailer based in New York, boasting a broa
 #### The objective of this project is to analyze the dataset and provide answers to the following business questions.
 
 - Question 1
-  - What are the three countries that generated the highest total profit for Global Superstore in 2014?
+  - What are the 3 countries that generated the highest total profit for Global Superstore in 2014?
   - For each of these three countries, find the three products with the highest total profit. Specifically, what are the products’ names and the total profit for each product?
 
 - Question 2
@@ -133,47 +133,83 @@ This contains information about individuals (employees) and their associated reg
 In the course of trying to clean the data using Excel, I realised it was already a clean data when collected from the source. I checked for data duplicates and spelling errors and found nothing. I went ahead to standardize the Excel spreadsheet, seperate the `Orders`, `Returns` and `People` sheets and covert them into CSV formats for easy data ingestion into MySQL Workbench using Table Data Import Wizard on MySQL Workbench.
 
 
-## Orders Table on Excel
+#### Orders Table on Excel
 
 ![Orders Table on Excel](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/83c9a798-208b-4be9-8a4d-16a453280468)
 
 
-## Returns Table on Excel
+#### Returns Table on Excel
 
 ![Returns Table on Excel](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/9192d9d1-ae1f-4414-89d1-b628c8d523cc)
 
 
-## People Table on Excel
+#### People Table on Excel
 
 ![People Table on Excel](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/cc4a7380-ddcf-4699-8f26-bccb0b48b2cc)
 
 
-## Orders Table on MySQL Workbench after converting Excel format to CSV and importing into MySQL
+#### Orders Table on MySQL Workbench after converting Excel format to CSV and importing into MySQL
 
 ![Orders Table on MySQL Workbench](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/3b2d7291-290e-4615-8361-dbf7d2fb5528)
 
 
-## Returns Table on MySQL Workbench after converting Excel format to CSV and importing into MySQL
+#### Returns Table on MySQL Workbench after converting Excel format to CSV and importing into MySQL
 
 ![Returns Table on MySQL Workbench](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/2b072ce3-3aba-467a-bc89-db1b19a29c4f)
 
 
-## People Table on MySQL Workbench after converting Excel format to CSV and importing into MySQL
+#### People Table on MySQL Workbench after converting Excel format to CSV and importing into MySQL
 
 ![People Table on MySQL Workbench](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/ac05d757-97c0-4feb-b618-af75525c8881)
 
 
 
 
-
-
-
-
-
-
 ## Case study business questions and answers
 
-What are the three countries that generated the highest total profit for Global Superstore in 2014?
+
+- #### What are the 3 countries that generated the highest total profit for Global Superstore in 2014?
+
+![ 3 countries that generated the highest total profit for Global Superstore in 2014](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/d8ccada9-52e9-4f88-a46f-360108542372)
+
+- #### In 2014, the 3 countries that generated the highest total profit for Global Superstore are:
+1.	United States with $93,508
+2.	India with $48,808
+3.	China with $46,794
+
+
+- #### For each of these three countries, find the three products with the highest total profit. Specifically, what are the products’ names and the total profit for each product?
+
+![3 products, each country](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/4e35e7b2-acfa-4749-8bb8-0cd8004affa1)
+
+- #### The 3 products with the highest total profit, the products’ names and the total profit for each product are:
+  
+- #### The 3 products in United States:
+
+1. Canon Image Class 2200 Advanced Copier with $14,560
+
+2. Fellowes PB500 Electric Punch Plastic Comb Binding Machine with Manual Bind with $7,626
+
+3. Hewlett Packard LaserJet 3310 Copier with $6,984
+
+- #### The 3 products in India:
+  
+1. Apple Smart Phone, with Caller ID with $2,818
+
+2. Sauder Classic Bookcase, Traditional $2,420
+
+3. Hewlett Wireless Fax, Color with $1,465
+
+- #### The 3 products in China:
+  
+1. Office Star Executive Leather Armchair, Black with $2,636
+
+2. Sharp Wireless Fax, Digital with $2,368
+
+3. Bush Classic Bookcase, Mobile with $2,267
+
+
+
 
 
 
