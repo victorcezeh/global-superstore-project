@@ -128,6 +128,11 @@ This contains information about individuals (employees) and their associated reg
 - `Region`: This refers to broader geographical location or area where the employee is located. This information is useful for organizational planning, management, and understanding the             distribution of employees across different locations.
 
 
+## Data cleaning and Ingestion into MySQL Workbench
+
+In the course of trying to clean the data using Excel, I realised it was already a clean data when collected from the source. I checked for data duplicates and spelling errors and found nothing. I went ahead to standardize the Excel spreadsheet, seperate the `Orders`, `Returns` and `People` sheets and covert them into CSV formats for easy data ingestion into MySQL Workbench using Table Data Import Wizard on MySQL Workbench.
+
+
 
 ## Case study business questions and answers
 
