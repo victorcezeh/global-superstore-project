@@ -351,19 +351,22 @@ A country in Southeast Asia where Global Superstore should stop offering the sub
 
 ```sql
 -- Select all cities, average profit and quantity count in the US
-SELECT city, AVG(Profit) AS Avg_profit, COUNT(quantity) AS quantity_count FROM vephlaproject.orders
+SELECT city, AVG(Profit) AS Avg_profit, COUNT(quantity) AS quantity_count
+FROM vephlaproject.orders
 WHERE country = 'United States'
 GROUP BY city
 ORDER BY 1;
 
 -- Find Minimum average profit from result above
-SELECT city, MIN(Avg_profit), quantity_count FROM vephlaproject.uscities
+SELECT city, MIN(Avg_profit), quantity_count
+FROM vephlaproject.uscities
 WHERE quantity_count >= 10
 GROUP BY avg_profit
 ORDER BY 2 ASC;
 
 -- Select Lancaster
-SELECT order_date, category, city, MIN(profit) AS Minprofit FROM vephlaproject.orders
+SELECT order_date, category, city, MIN(profit) AS Minprofit
+FROM vephlaproject.orders
 WHERE city = 'Lancaster'
 GROUP BY profit
 ORDER BY 4;
