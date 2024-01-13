@@ -251,7 +251,7 @@ SELECT country, profit FROM vephlaproject.orders
 WHERE Region = 'Africa';
 ```
 
-####Output
+#### Output
 
 The result of the query above was exported as a table in Excel format, standardized and visualized using Power BI.
 
@@ -268,8 +268,6 @@ In 2014, Nigeria made a loss of -$9,753. Nigeria lost the most money in the Afri
 
 
 #### What factors might be responsible for Nigeria’s poor performance?
-
-Factors that might be responsible for Nigeria’s poor performance could be its shipping cost and average discount.
 
 
 ```sql
@@ -298,12 +296,12 @@ The result of the query above was exported as a table in Excel format, standardi
 
 
 
-
 Factors that might be responsible for Nigeria’s poor performance could be its shipping cost and average discount.
+
 1. Shipping Cost: $6,183.11
 2. Average Discount: $0.70
 
-Nigeria’s shipping costs is way too high and this could be the possible reason Nigeria is losing so much money rather than making profits. Also, the average discount in Nigeria is really low.
+Nigeria’s shipping costs is way too high and this could be the possible reason Nigeria is losing so much money rather than making profits. Also, the average discount is relatively high compared to other countries.
 
 
 - #### Identify the product subcategory that is the least profitable in Southeast Asia.
@@ -329,7 +327,7 @@ The result of the query above was exported as a table in Excel format, standardi
 The product subcategory that is the least profitable in Southeast Asia is Tables with a profit loss of -$20,163
 
 
-####  Is there a specific country in Southeast Asia where Global Superstore should stop offering the subcategory identified in the above result?
+####  Is there a specific country in Southeast Asia where Global Superstore should stop offering the subcategory identified from the result above?
 
 ```sql
 -- Sum up profit loss of tables in Southeast Asia
@@ -341,31 +339,57 @@ AND sub_category = 'Tables';
 
 #### Output
 
-![Too much losses in Indonesia)](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/53e62134-d1d4-472f-bee0-7bca495e98fe)
+![Too much losses in Indonesia](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/15ff3e66-2c53-4a40-91b7-c2aebafaa1e3)
 
 
-A country in Southeast Asia where Global Superstore should stop offering the subcategory is Indonesia. They habour most of the subcategory losses for tables.
+A country in Southeast Asia where Global Superstore should stop offering the subcategory Tables is Indonesia. They geneerated most of the losses and it will be good to understand why they have generated so much loss from this subcategory before we keep offering them.
 
 
-#### Which city is the least profitable (in terms of average profit) in the United States? For this analysis, I discarded the cities with less than 10 Orders.
+#### Which city is the least profitable (in terms of average profit) in the United States? For this analysis, I discarded the cities with less than 10 orders.
 
 ```sql
 -- Select all cities, average profit and quantity count in the US
-SELECT city, AVG(Profit) AS Avg_profit, COUNT(quantity) AS quantity_count
+SELECT city, AVG(Profit) AS avg_profit, COUNT(quantity) AS quantity_count
 FROM vephlaproject.orders
 WHERE country = 'United States'
 GROUP BY city
 ORDER BY 1;
 
 -- Find Minimum average profit from result above
-SELECT city, MIN(Avg_profit), quantity_count
+SELECT city, MIN(Avg_profit) as min_average_profit, quantity_count
 FROM vephlaproject.uscities
 WHERE quantity_count >= 10
 GROUP BY avg_profit
 ORDER BY 2 ASC;
 
+```
+
+The result of the query above was exported as a table in Excel format, standardized and visualized using Power BI.
+
+#### Output
+
+
+![Average Profit City](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/0ecc4994-00f8-41a0-ba42-53c65d99edfc)
+
+
+
+![Minimum Average City](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/3b0b25d6-6a8a-4e7f-8822-d476e61719e4)
+
+
+
+![Least Profitable City Viz)](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/e317a7c4-68f7-4e86-8492-6eed62559fe8)
+
+
+
+The city with is the least profitable (in terms of average profit) in the United States is Lancaster City with an average of -$169
+
+
+
+#### Why is this city’s average profit so low?
+
+```sql
 -- Select Lancaster
-SELECT order_date, category, city, MIN(profit) AS Minprofit
+SELECT order_date, category, city, MIN(profit) AS min_profit
 FROM vephlaproject.orders
 WHERE city = 'Lancaster'
 GROUP BY profit
@@ -373,6 +397,17 @@ ORDER BY 4;
 
 ```
 
+The result of the query above was exported as a table in Excel format, standardized and visualized using Power BI.
+
+#### Output
+
+![Lancaster](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/109779f2-30b4-45da-80ab-b2f40d318b02)
+
+
+![Lancaster Viz](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/d27ea721-88cb-494f-bb73-3cb2d7db3200)
+
+
+Lancaster City’s average profit is low because they make so much loss in profit when they purchase technology products. They had a loss of -$6,880
 
 
 
