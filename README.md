@@ -29,7 +29,7 @@ Global Superstore is a global online retailer based in New York, boasting a broa
 
 - Question 3
   - Assess Nigeria’s profitability (i.e., total profit) for 2014. How does it compare to other African countries?
-  - What factors might be responsible for Nigeria’s poor performance? You might want to investigate shipping costs and the average discount as potential root causes.
+  - What factors might be responsible for Nigeria’s poor performance?
 
 - Question 4
   - Identify the product subcategory that is the least profitable in Southeast Asia. Note: For this question, there is an assumption that Southeast Asia comprises Cambodia, Indonesia,       Malaysia, Myanmar(Burma), the Philippines, Singapore, Thailand, and Vietnam.
@@ -128,9 +128,9 @@ This contains information about individuals (employees) and their associated reg
 - `Region`: This refers to broader geographical location or area where the employee is located. This information is useful for organizational planning, management, and understanding the             distribution of employees across different locations.
 
 
-## Data cleaning and Ingestion into MySQL Workbench
+## Data cleaning and importation into MySQL Workbench
 
-In the course of trying to clean the data using Excel, I realised it was already a clean data when collected from the source. I checked for data duplicates and spelling errors and found nothing. I went ahead to standardize the Excel spreadsheet, seperate the `Orders`, `Returns` and `People` sheets and covert them into CSV formats for easy data ingestion into MySQL Workbench using Table Data Import Wizard on MySQL Workbench.
+In the course of trying to clean the data using Excel, I realised it was already a clean data when collected from the source. I checked for data duplicates and spelling errors and found nothing. I went ahead to standardize the Excel spreadsheet, seperate the `Orders`, `Returns` and `People` sheets and covert them into CSV formats for easy data importation into MySQL Workbench using Table Data Import Wizard on MySQL Workbench.
 
 
 #### Orders Table on Excel
@@ -224,6 +224,8 @@ LIMIT 3;
 
 #### Output
 
+The result of the query above was exported as a table in Excel format, standardized and visualized using Power BI.
+
 ![average shippping cost United States](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/3ac1f379-9535-4b1f-a5c7-47fcf7433505)
 
 
@@ -241,6 +243,67 @@ LIMIT 3;
 3. Tables with $70
 
 
+- #### Assess Nigeria’s profitability (i.e., total profit) for 2014. How does it compare to other African countries?
+
+```sql
+-- Select African Region
+SELECT country, profit FROM vephlaproject.orders
+WHERE Region = 'Africa';
+```
+
+####Output
+
+The result of the query above was exported as a table in Excel format, standardized and visualized using Power BI.
+
+![Nigeria’s Profitability)](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/04e7f362-0ae6-4cb8-a079-16a4c85fe626)
+
+
+![Nigeria’s Profitability Viz](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/915edde4-ce97-44e7-94fb-888fb1c547f8)
+
+
+
+#### Nigeria’s profitability/total profit for 2014 and how it compares to other African countries.
+
+In 2014, Nigeria made a loss of -$9,753. Nigeria lost the most money in the African region in that same year just after Zimbabwe who made a loss of -$1,404. On the other hand, South Africa, Morocco, Egypt and Republic of Congo made the most profit with $7,242, $6,274, $4,774 and $4,228 respectively in 2014.
+
+
+#### What factors might be responsible for Nigeria’s poor performance?
+
+Factors that might be responsible for Nigeria’s poor performance could be its shipping cost and average discount.
+
+
+```sql
+-- Sum up Nigeria Shipping Cost 
+SELECT SUM(shipping_cost) as shipping_cost, country, region
+FROM vephlaproject.orders
+WHERE country = 'Nigeria';
+
+-- Find average discount in Nigeria
+SELECT AVG(discount) as average_discount, country, region
+FROM vephlaproject.orders
+WHERE country = 'Nigeria';
+```
+
+The result of the query above was exported as a table in Excel format, standardized and visualized using Power BI.
+
+#### Output
+
+![Shipping Cost)](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/70da84ff-e576-4a06-b99c-513fe33c6a08)
+
+
+![Average Discount)](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/aa5ced43-da84-4df7-97fa-5c21753c8ded)
+
+
+![Shipping Cost & Average Discount Viz)](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/e3bf2aa8-17c9-48da-9108-f3de0b2fd417)
+
+
+
+
+Factors that might be responsible for Nigeria’s poor performance could be its shipping cost and average discount.
+1. Shipping Cost: $6,183.11
+2. Average Discount: $0.70
+
+Nigeria’s shipping costs is way too high and this could be the possible reason Nigeria is losing so much money rather than making profits. Also, the average discount in Nigeria is really low.
 
 
 
