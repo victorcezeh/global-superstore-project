@@ -210,6 +210,40 @@ In the course of trying to clean the data using Excel, I realised it was already
 
 
 
+- #### Identify the 3 subcategories with the highest average shipping cost in the United States.
+
+```sql
+-- Identify the 3 subcategories with the highest average shipping cost in the United States.
+SELECT sub_category, country, (AVG (shipping_cost)) as average_shipping_cost_US
+FROM vephlaproject.orders
+WHERE country = 'United States'
+GROUP BY sub_category
+ORDER BY 3 DESC
+LIMIT 3;
+```
+
+#### Output
+
+![average shippping cost United States](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/3ac1f379-9535-4b1f-a5c7-47fcf7433505)
+
+
+
+
+![average shippping cost United States_Viz](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/c8173c6b-bbee-4013-a2cd-69fc5145242f)
+
+
+
+
+#### The 3 subcategories with the highest average shipping cost in the United States are:
+
+1. Copiers with $165
+2. Machines with $132
+3. Tables with $70
+
+
+
+
+
 
 
 
