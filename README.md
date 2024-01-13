@@ -36,7 +36,7 @@ Global Superstore is a global online retailer based in New York, boasting a broa
   - Is there a specific country in Southeast Asia where Global Superstore should stop offering the subcategory identified in the first part of this question?
  
 - Question 5
-  - Which city is the least profitable (in terms of average profit) in the United States? For this analysis, discard the cities with less than 10 Orders.
+  - Which city is the least profitable (in terms of average profit) in the United States? For this analysis, I discard the cities with less than 10 Orders.
   - Why is this city’s average profit so low?
 
 - Question 6
@@ -304,6 +304,72 @@ Factors that might be responsible for Nigeria’s poor performance could be its 
 2. Average Discount: $0.70
 
 Nigeria’s shipping costs is way too high and this could be the possible reason Nigeria is losing so much money rather than making profits. Also, the average discount in Nigeria is really low.
+
+
+- #### Identify the product subcategory that is the least profitable in Southeast Asia.
+
+```sql
+-- Identify the product subcategory that is the least profitable in Southeast Asia.
+SELECT sub_category, profit, country
+FROM vephlaproject.orders
+WHERE country IN ('cambodia', 'Indonesia', 'malaysia',  'Myanmar (Burma)', 'Philippines', 'Singapore', 'Thailand', 'Vietnam')
+ORDER BY 2 ASC;
+```
+
+The result of the query above was exported as a table in Excel format, standardized and visualized using Power BI.
+
+#### Output
+
+![least profitable in Southeast Asia](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/cbfd8316-63fc-4abb-8279-aeca6361e857)
+
+
+![least profitable in Southeast Asia Viz](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/a25ae686-e014-4adc-8d5c-a6d0a5940eca)
+
+
+The product subcategory that is the least profitable in Southeast Asia is Tables with a profit loss of -$20,163
+
+
+####  Is there a specific country in Southeast Asia where Global Superstore should stop offering the subcategory identified in the above result?
+
+```sql
+-- Sum up profit loss of tables in Southeast Asia
+SELECT sub_category, SUM(profit) , country FROM vephlaproject.orders
+WHERE country IN ('cambodia', 'Indonesia', 'malaysia',  'Myanmar (Burma)', 'Philippines', 'Singapore', 'Thailand', 'Vietnam')
+AND sub_category = 'Tables';
+
+```
+
+#### Output
+
+![Too much losses in Indonesia)](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/53e62134-d1d4-472f-bee0-7bca495e98fe)
+
+
+A country in Southeast Asia where Global Superstore should stop offering the subcategory is Indonesia. They habour most of the subcategory losses for tables.
+
+
+#### Which city is the least profitable (in terms of average profit) in the United States? For this analysis, I discarded the cities with less than 10 Orders.
+
+```sql
+-- Select all cities, average profit and quantity count in the US
+SELECT city, AVG(Profit) AS Avg_profit, COUNT(quantity) AS quantity_count FROM vephlaproject.orders
+WHERE country = 'United States'
+GROUP BY city
+ORDER BY 1;
+
+-- Find Minimum average profit from result above
+SELECT city, MIN(Avg_profit), quantity_count FROM vephlaproject.uscities
+WHERE quantity_count >= 10
+GROUP BY avg_profit
+ORDER BY 2 ASC;
+
+-- Select Lancaster
+SELECT order_date, category, city, MIN(profit) AS Minprofit FROM vephlaproject.orders
+WHERE city = 'Lancaster'
+GROUP BY profit
+ORDER BY 4;
+
+```
+
 
 
 
