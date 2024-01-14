@@ -410,6 +410,32 @@ The result of the query above was exported as a table in Excel format, standardi
 Lancaster City’s average profit is low because they make so much loss in profit when they purchase technology products. They had a loss of -$6,880
 
 
+#### Which product subcategory has the highest average profit in Australia?
+
+```sql
+-- Which product subcategory has the highest average profit in Australia
+SELECT Sub_category, AVG(profit) AS australia_avg
+FROM vephlaproject.orders
+WHERE country = 'Australia'
+GROUP BY sub_category
+ORDER BY 2 DESC;
+
+```
+
+The result of the query above was exported as a table in Excel format, standardized and visualized using Power BI.
+
+#### Output
+
+![Highest average profit in Australia](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/2c5ade0c-b640-4787-aa0e-1abdaccd10ce)
+
+
+![Highest average profit in Australia Viz](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/0468a177-9284-4628-9266-89021b59ff6b)
+
+
+The product subcategory with the highest average profit in Australia is Appliances with an average profit of $139.
+
+
+
 
 
 
