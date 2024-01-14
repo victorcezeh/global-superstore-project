@@ -523,4 +523,4 @@ The total profit generated from customers amounts to $1.47M across 1.59K custome
 
 ## Acknowledgements
 
-A big thank you to [Vephla University](https://vephlainstitute.com/){:target="_blank"} for equipping me with the necessary skillset to take on this project.
+A big thank you to [Vephla University](https://vephlainstitute.com/) for equipping me with the necessary skillset to take on this project.
