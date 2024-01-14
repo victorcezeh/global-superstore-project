@@ -15,7 +15,7 @@
 - [Case study business questions and answers](#Case-study-business-questions-and-answers)
 - [Tools Used](#Tools-Used)
 - [Skillset Applied](Skillset-Applied)
-- [Acknowledgements](#Acknowledgements)
+- [Acknowledgement](#Acknowledgement)
 
 
 ## Brief
