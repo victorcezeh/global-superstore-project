@@ -14,7 +14,8 @@
 - [Data cleaning and importation into MySQL Workbench](#Data-cleaning-and-importation-into-MySQL-Workbench)
 - [Case study business questions and answers](#Case-study-business-questions-and-answers)
 - [Tools Used](#Tools-Used)
-- [Skillset Applied](Skillset-Applied)
+- [Skillset Applied](#Skillset-Applied)
+- [Project Structure](#Project-Structure)
 - [Acknowledgement](#Acknowledgement)
 
 
@@ -520,6 +521,8 @@ From the overall profit generated, these are the to 10 customers who had the mos
 `Global Superstore Report.pdf`: This file contains report from the analysis.
 
 `Global Superstore SQL Queries.sql`: This file contains the queries used for this project and as seen on the documentation as well.
+
+`GlobalSuperstore Data.xls`: This file contains the dataset in a spreadsheet(Excel).
 
 `README.md`: Project documentation.
 
