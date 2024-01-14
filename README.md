@@ -432,89 +432,75 @@ The result of the query above was exported as a table in Excel format, standardi
 ![Highest average profit in Australia Viz](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/0468a177-9284-4628-9266-89021b59ff6b)
 
 
-The product subcategory with the highest average profit in Australia is Appliances with an average profit of $139.
+The product subcategory with the highest average profit in Australia is Appliances with an average profit of $139. This is followed by Copiers with an avrage profit of $105 and Phones follow with and average of $98.
 
 
+#### Which customer returned items and what segment do they belong?
+
+![Returned Items](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/c2184f1b-5699-4c41-a8d2-b7f8b371a04d)
+
+The total number of customers who returned items is 619. They are segmented into three distinct categories: Consumer, Corporate, and Home Office.
 
 
+#### Who are the most valuable customers and what do they purchase?
+
+#### Top 10 custermers by profit
+
+```sql
+-- 10 Most Valuable Customers & What They Purchase.
+SELECT customer_name, product_name, MAX(profit) as max_profit
+FROM vephlaproject.orders
+GROUP BY customer_name
+ORDER BY MAX(profit) DESC
+LIMIT 10;
+
+```
+
+The result of the query above was exported as a table in Excel format, standardized and visualized using Power BI.
+
+#### Output
+
+![Top 10 Valuable Customers](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/f1fccdb2-9464-4b6d-aa45-eb1014ce6f1a)
+
+
+![Top 10 Valuable Customers Viz](https://github.com/victorcezeh/Global_Superstore_Project/assets/129629266/8e02b4a7-31d2-45e6-b6fb-d042a72ca1e4)
+
+The total profit generated from customers amounts to $1.47M across 1.59K customers. The top 10 valuable customers based on total profit generated and products purchased are:
+
+
+1. Tamara Chand with $8,400 and purchased a Canon imageCLASS 2200 Advanced Copier.
+2. Raymond Buch with $6,720 and purchased an Ikea Library with Doors, Traditional.
+3. Hunter Lopez with $5,040 and purchased a Brother Fax Machine, Digital.
+4. Adrian Barton with $4,946 and purchased a GBC Ibimaster 500 Manual ProClick Binding System.
+5. Sanjit Chand with $4,630 and purchased an Ibico EPK-21 Electric Binding System.
+6. Patrick Jones with $3,979 and purchased a Hoover Stove, Red.
+7. Tom Ashbrook with $3,920 and purchased a Polycom CX600 IP Phone VoIP phone.
+8. Christopher Martinez with $3,177 and purchased a Fellowes PB500 Electric Punch Plastic Comb Binding Machine with Manual Bind.
+9. Carol Adams with $2,939 and purchased a Samsung Smart Phone, VoIP.
+10. Cynthia Arntzen with $2,818 and purchased an Apple Smart Phone, with Caller ID.
+
+#### From the overall profit generated, these are the to 10 customers who had the most significant impact based on total revenue generated.
 
 
 
 
 ## Tools Used
 
+- Microsoft Excel
 - [MySQL Workbench](https://dev.mysql.com/downloads/workbench/) (version 8.0)
 - [Power BI Desktop](https://www.microsoft.com/en-us/download/details.aspx?id=58494)
 
 
 ## Skillset Applied
 
-- Data cleaning
-- Data ingestion
-- SQL
-- Data modeling
-- Data visualization using PowerBI
+- Excel
+- Data Importation
+- MySQL
+- Data Visualization using
+- Power BI
 - Knowledge of generating actionable insights
+- Documentation
 
-
-## Expense
-### Attributes
-`id`: Unique identifier generated as a UUID string.
-
-`title`: String representing the title of the expense.
-
-`amount`: Float representing the amount of the expense.
-
-`created_at`: Timestamp indicating when the expense was created (UTC).
-
-`updated_at`: Timestamp indicating the last time the expense was updated (UTC).
-
-
-
-### Methods
-`update_expense(title, amount)`: Updates the expense details.
-
-`to_dict()`: Returns a dictionary representation of the expense.
-
-
-
-## ExpenseDataBase
-### Attributes
-`expenses`: List storing Expense instances.
-
-
-
-### Methods
-`add_expense(expense)`: Adds an expense to the collection.
-
-`remove_expense(expense_id)`: Removes an expense from the collection.
-
-`get_expense_by_id(expense_id)`: Retrieves an expense by ID.
-
-`get_expense_by_title(expense_title)`: Retrieves expenses by title.
-
-`to_dict()`: Returns a list of dictionaries representing expenses.
-
-
-
-
-## Clone Repo
-
-Copy link below and paste on yout Git to clone the repository.
-
-   ```bash
-   git clone https://github.com/victorcezeh/Object_Oriented_Programming_Project.git
-   cd Object_Oriented_Programming_Project
-   ```
-
-
-## Usage
-
-Run the Expense Tracker with the code below.
-
-```bash
-python main.py
-```
 
 
 ## Project Structure
@@ -527,6 +513,6 @@ python main.py
 
 
 
-## Contributing
+## Acknowledgements
 
 If you'd like to contribute to the project, kindly contact ezeh_victor@yahoo.com
