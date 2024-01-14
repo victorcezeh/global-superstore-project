@@ -521,6 +521,6 @@ The total profit generated from customers amounts to $1.47M across 1.59K custome
 `Global Superstore Power BI.pbix`: This file contains the data visualization of this project and as seen on the documentation as well.
 
 
-## Acknowledgements
+## Acknowledgement
 
 A big thank you to [Vephla University](https://vephlainstitute.com/) for equipping me with the necessary skillset to take on this project.
