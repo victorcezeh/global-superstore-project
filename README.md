@@ -488,7 +488,8 @@ The total profit generated from customers amounts to $1.47M across 1.59K custome
 9. Carol Adams with $2,939 and purchased a Samsung Smart Phone, VoIP.
 10. Cynthia Arntzen with $2,818 and purchased an Apple Smart Phone, with Caller ID.
 
-#### From the overall profit generated, these are the to 10 customers who had the most significant impact based on total revenue generated.
+
+From the overall profit generated, these are the to 10 customers who had the most significant impact based on total revenue generated.
 
 
 
