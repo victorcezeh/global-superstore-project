@@ -515,11 +515,13 @@ From the overall profit generated, these are the to 10 customers who had the mos
 
 ## Project Structure
 
+`Global Superstore Power BI.pbix`: This file contains the data visualization of this project and as seen on the documentation as well.
+
+`Global Superstore Report.pdf`: This file contains report from the analysis.
+
 `Global Superstore SQL Queries.sql`: This file contains the queries used for this project and as seen on the documentation as well.
 
 `README.md`: Project documentation.
-
-`Global Superstore Power BI.pbix`: This file contains the data visualization of this project and as seen on the documentation as well.
 
 
 ## Acknowledgement
