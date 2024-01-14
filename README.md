@@ -3,17 +3,24 @@
 ![Global Store](https://images.pexels.com/photos/1797428/pexels-photo-1797428.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
 
 
+## Table of Contents
+
+- [Brief](#Brief)
+- [Objective](#Objective)
+- [Dataset and spreadsheet explanation](#Dataset-and-spreadsheet-explanation)
+  - [Order Sheet](#Order-Sheet)
+  - [Returns Sheet](#Returns-Sheet)
+  - [People Sheet](#People-Sheet)
+- [Data cleaning and importation into MySQL Workbench](#Data-cleaning-and-importation-into-MySQL-Workbench)
+- [Case study business questions and answers](#Case-study-business-questions-and-answers)
+- [Tools Used](#Tools-Used)
+- [Skillset Applied](Skillset-Applied)
+- [Acknowledgements](#Acknowledgements)
+
+
 ## Brief
 Global Superstore is a global online retailer based in New York, boasting a broad product catalogue and aiming to be a one-stop-shop for its customers globally. The superstore’s clientele, hailing from 147 different countries can browse through an endless offering with more than 10,000 products. This large selection comprises three main categories: `office` `supplies` (e.g. staples), `furniture` (e.g. chairs), and `technology` (e.g. smartphones). I have been contracted as a Data Analyst to help Global Superstore analyze and draw out meaningful insight from the Superstore dataset which would aid management in making informed decisions to improve performance and profitability.
 
-## Table of Contents
-
-- [Getting Started](#Getting-Started)
-  - [Tools Used](#Tools-Used)
-  - [Clone Repo](#Clone-Repo)
-  - [Usage](#Usage)
-- [Project Structure](#Project-Structure)
-- [Contributing](#Contributing)
 
 
 ## Objective
@@ -247,7 +254,8 @@ The result of the query above was exported as a table in Excel format, standardi
 
 ```sql
 -- Select African Region
-SELECT country, profit FROM vephlaproject.orders
+SELECT country, profit
+FROM vephlaproject.orders
 WHERE Region = 'Africa';
 ```
 
@@ -331,7 +339,8 @@ The product subcategory that is the least profitable in Southeast Asia is Tables
 
 ```sql
 -- Sum up profit loss of tables in Southeast Asia
-SELECT sub_category, SUM(profit) , country FROM vephlaproject.orders
+SELECT sub_category, SUM(profit) , country
+FROM vephlaproject.orders
 WHERE country IN ('cambodia', 'Indonesia', 'malaysia',  'Myanmar (Burma)', 'Philippines', 'Singapore', 'Thailand', 'Vietnam')
 AND sub_category = 'Tables';
 
@@ -488,16 +497,16 @@ The total profit generated from customers amounts to $1.47M across 1.59K custome
 
 - Microsoft Excel
 - [MySQL Workbench](https://dev.mysql.com/downloads/workbench/) (version 8.0)
-- [Power BI Desktop](https://www.microsoft.com/en-us/download/details.aspx?id=58494)
+- [Microsoft Power BI Desktop](https://www.microsoft.com/en-us/download/details.aspx?id=58494)
 
 
 ## Skillset Applied
 
-- Excel
+- Microsoft Excel
 - Data Importation
 - MySQL
 - Data Visualization using
-- Power BI
+- Microsoft Power BI
 - Knowledge of generating actionable insights
 - Documentation
 
@@ -505,14 +514,13 @@ The total profit generated from customers amounts to $1.47M across 1.59K custome
 
 ## Project Structure
 
-`Object_Oriented_Programming.py`: This code containes the Expense and ExpenseDataBase Class Implementations.
+`Global Superstore SQL Queries.sql`: This file contains the queries used for this project and as seen on the documentation as well.
 
 `README.md`: Project documentation.
 
-`main.py`: The main script to test run the Expense Tracker.
-
+`Global Superstore Power BI.pbix`: This file contains the data visualization of this project and as seen on the documentation as well.
 
 
 ## Acknowledgements
 
-If you'd like to contribute to the project, kindly contact ezeh_victor@yahoo.com
+A big thank you to [Vephla University](https://vephlainstitute.com/)for equipping me with the necessary skillset to take on this project.
