@@ -21,7 +21,6 @@
 
 ## Brief
 Global Superstore is a global online retailer based in New York, boasting a broad product catalogue and aiming to be a one-stop-shop for its customers globally. The superstore’s clientele, hailing from 147 different countries can browse through an endless offering with more than 10,000 products. This large selection comprises three main categories: `office` `supplies` (e.g. staples), `furniture` (e.g. chairs), and `technology` (e.g. smartphones). I have been contracted as a Data Analyst to help Global Superstore analyze and draw out meaningful insight from the Superstore dataset which would aid management in making informed decisions to improve performance and profitability.
-This project documentation contains screenshots of data visualization as a means to interpret and easily read results gotten from my analysis. It also contains SQL scripts that helped derive and drive my decison making process in this project.
 
 
 
@@ -54,6 +53,10 @@ This project documentation contains screenshots of data visualization as a means
 - Question 7
   - Which customer returned items and what segment do they belong
   - Who are the most valuable customers and what do they purchase?
+    
+ 
+
+#### This project documentation contains screenshots of data visualization as a means to interpret and easily read results gotten from my analysis. It also contains SQL scripts that helped derive and drive my decison making process in this project.
  
 
 
@@ -63,12 +66,15 @@ This project documentation contains screenshots of data visualization as a means
 The dataset for this project is presented in an unstandardized Excel spreadsheet format. It contains 3 different but related spreadsheets. These spreadsheets are:
 
 
-#### Order Sheet
-#### Returns Sheet &
-#### Peoples Sheet
+- #### Order Sheet
+- #### Returns Sheet &
+- #### Peoples Sheet
 
 
-I will explain the details of these sheets one by one.
+
+
+I will explain the details of these sheets one after the other.
+
 
 
 
