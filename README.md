@@ -21,6 +21,7 @@
 
 ## Brief
 Global Superstore is a global online retailer based in New York, boasting a broad product catalogue and aiming to be a one-stop-shop for its customers globally. The superstore’s clientele, hailing from 147 different countries can browse through an endless offering with more than 10,000 products. This large selection comprises three main categories: `office` `supplies` (e.g. staples), `furniture` (e.g. chairs), and `technology` (e.g. smartphones). I have been contracted as a Data Analyst to help Global Superstore analyze and draw out meaningful insight from the Superstore dataset which would aid management in making informed decisions to improve performance and profitability.
+This project documentation contains screenshots of data visualization as a means to interpret and easily read results gotten from my analysis. It also contains SQL scripts that helped derive and drive my decison making process in this project.
 
 
 
@@ -61,7 +62,18 @@ Global Superstore is a global online retailer based in New York, boasting a broa
 
 The dataset for this project is presented in an unstandardized Excel spreadsheet format. It contains 3 different but related spreadsheets. These spreadsheets are:
 
+
 #### Order Sheet
+#### Returns Sheet &
+#### Peoples Sheet
+
+
+I will explain the details of these sheets one by one.
+
+
+
+#### Order Sheet
+
 This spreadsheet contains data of orders made by customers. The columns in this sheet consist of the following:
 
 - `Row ID`: This represents a general identifier for the row within the spreadsheet.
@@ -222,12 +234,16 @@ In the course of trying to clean the data using Excel, I realised it was already
 
 ```sql
 -- Identify the 3 subcategories with the highest average shipping cost in the United States.
-SELECT sub_category, country, (AVG (shipping_cost)) as average_shipping_cost_US
+SELECT
+  sub_category,
+  country,
+  (AVG (shipping_cost)) as average_shipping_cost_US
 FROM vephlaproject.orders
 WHERE country = 'United States'
 GROUP BY sub_category
 ORDER BY 3 DESC
 LIMIT 3;
+
 ```
 
 #### Output
@@ -255,9 +271,12 @@ The result of the query above was exported as a table in Excel format, standardi
 
 ```sql
 -- Select African Region
-SELECT country, profit
+SELECT
+  country,
+  profit
 FROM vephlaproject.orders
 WHERE Region = 'Africa';
+
 ```
 
 #### Output
@@ -281,14 +300,21 @@ In 2014, Nigeria made a loss of -$9,753. Nigeria lost the most money in the Afri
 
 ```sql
 -- Sum up Nigeria Shipping Cost 
-SELECT SUM(shipping_cost) as shipping_cost, country, region
+SELECT
+  SUM(shipping_cost) as shipping_cost,
+  country,
+  region
 FROM vephlaproject.orders
 WHERE country = 'Nigeria';
 
 -- Find average discount in Nigeria
-SELECT AVG(discount) as average_discount, country, region
+SELECT
+  AVG(discount) as average_discount,
+  country,
+  region
 FROM vephlaproject.orders
 WHERE country = 'Nigeria';
+
 ```
 
 The result of the query above was exported as a table in Excel format, standardized and visualized using Power BI.
@@ -317,10 +343,14 @@ Nigeria’s shipping costs is way too high and this could be the possible reason
 
 ```sql
 -- Identify the product subcategory that is the least profitable in Southeast Asia.
-SELECT sub_category, profit, country
+SELECT
+  sub_category,
+  profit,
+  country
 FROM vephlaproject.orders
 WHERE country IN ('cambodia', 'Indonesia', 'malaysia',  'Myanmar (Burma)', 'Philippines', 'Singapore', 'Thailand', 'Vietnam')
 ORDER BY 2 ASC;
+
 ```
 
 The result of the query above was exported as a table in Excel format, standardized and visualized using Power BI.
@@ -340,7 +370,10 @@ The product subcategory that is the least profitable in Southeast Asia is Tables
 
 ```sql
 -- Sum up profit loss of tables in Southeast Asia
-SELECT sub_category, SUM(profit) , country
+SELECT
+  sub_category,
+  SUM(profit) ,
+  country
 FROM vephlaproject.orders
 WHERE country IN ('cambodia', 'Indonesia', 'malaysia',  'Myanmar (Burma)', 'Philippines', 'Singapore', 'Thailand', 'Vietnam')
 AND sub_category = 'Tables';
@@ -359,14 +392,20 @@ A country in Southeast Asia where Global Superstore should stop offering the sub
 
 ```sql
 -- Select all cities, average profit and quantity count in the US
-SELECT city, AVG(Profit) AS avg_profit, COUNT(quantity) AS quantity_count
+SELECT
+  city,
+  AVG(Profit) AS avg_profit,
+  COUNT(quantity) AS quantity_count
 FROM vephlaproject.orders
 WHERE country = 'United States'
 GROUP BY city
 ORDER BY 1;
 
 -- Find Minimum average profit from result above
-SELECT city, MIN(Avg_profit) as min_average_profit, quantity_count
+SELECT
+  city,
+  MIN(Avg_profit) as min_average_profit,
+  quantity_count
 FROM vephlaproject.uscities
 WHERE quantity_count >= 10
 GROUP BY avg_profit
@@ -399,7 +438,11 @@ The city with is the least profitable (in terms of average profit) in the United
 
 ```sql
 -- Select Lancaster
-SELECT order_date, category, city, MIN(profit) AS min_profit
+SELECT
+  order_date,
+  category,
+  city,
+  MIN(profit) AS min_profit
 FROM vephlaproject.orders
 WHERE city = 'Lancaster'
 GROUP BY profit
@@ -424,7 +467,9 @@ Lancaster City’s average profit is low because they make so much loss in profi
 
 ```sql
 -- Which product subcategory has the highest average profit in Australia
-SELECT Sub_category, AVG(profit) AS australia_avg
+SELECT
+  Sub_category,
+  AVG(profit) AS australia_avg
 FROM vephlaproject.orders
 WHERE country = 'Australia'
 GROUP BY sub_category
@@ -458,7 +503,9 @@ The total number of customers who returned items is 619. They are segmented into
 
 ```sql
 -- 10 Most Valuable Customers & What They Purchase.
-SELECT customer_name, product_name, MAX(profit) as max_profit
+SELECT
+  customer_name,
+  product_name, MAX(profit) as max_profit
 FROM vephlaproject.orders
 GROUP BY customer_name
 ORDER BY MAX(profit) DESC
