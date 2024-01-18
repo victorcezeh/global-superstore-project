@@ -378,7 +378,7 @@ The product subcategory that is the least profitable in Southeast Asia is Tables
 -- Sum up profit loss of tables in Southeast Asia
 SELECT
   sub_category,
-  SUM(profit) ,
+  SUM(profit),
   country
 FROM vephlaproject.orders
 WHERE country IN ('cambodia', 'Indonesia', 'malaysia',  'Myanmar (Burma)', 'Philippines', 'Singapore', 'Thailand', 'Vietnam')
