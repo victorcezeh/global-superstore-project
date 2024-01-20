@@ -553,6 +553,7 @@ From the overall profit generated, these are the to 10 customers who had the mos
 - Microsoft Excel
 - [MySQL Workbench](https://dev.mysql.com/downloads/workbench/) (version 8.0)
 - [Microsoft Power BI Desktop](https://www.microsoft.com/en-us/download/details.aspx?id=58494)
+  
 
 
 ## Skillset Applied
@@ -560,8 +561,7 @@ From the overall profit generated, these are the to 10 customers who had the mos
 - Microsoft Excel
 - Data Importation
 - MySQL
-- Data Visualization using
-- Microsoft Power BI
+- Data Visualization using Microsoft Power BI
 - Knowledge of generating actionable insights
 - Documentation
 
